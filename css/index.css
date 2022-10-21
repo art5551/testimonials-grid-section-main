@@ -66,7 +66,6 @@ img {
 /* End of reset CSS*/
 footer {
   display: flex;
-  position: absolute;
   width: 100%;
   justify-content: center;
   bottom: 0;
@@ -84,16 +83,13 @@ footer {
 
 body {
   display: grid;
-  place-content: center;
   min-height: 100vh;
   background-color: bg-white;
 }
 
 main {
   display: grid;
-  gap: 1rem;
-  padding-block: 1rem;
-  width: min(95%,70rem);
+  gap: 1.5rem;
   grid-auto-columns: 1fr;
   margin-inline: auto;
   grid-template-areas: 
@@ -102,6 +98,10 @@ main {
   "three" 
   "four" 
   "five";
+
+  padding-block: 2rem;
+  width: min(95%,70rem);
+  margin-inline: auto;
 }
 
 article:nth-child(1) {
@@ -120,7 +120,8 @@ article:nth-child(5) {
   grid-area: five;
 }
 
-@media (min-width: 30em) {
+
+@media (min-width: 38em) {
   main {
       grid-template-areas:
       "one one"
@@ -130,7 +131,7 @@ article:nth-child(5) {
   }
 }
 
-@media (min-width: 50em) {
+@media (min-width: 54em) {
   main {
       grid-template-areas:
       "one one two"
@@ -154,7 +155,7 @@ article:nth-child(5) {
 }
 
 .shadows {
-  box-shadow: 2.5rem 3.5rem 3rem -3rem rgb(170, 170, 170);
+  box-shadow: .625rem .625rem 1.875rem rgba(0, 0, 0, 0.1);
 }
 
 .bg-primary {
