@@ -1,0 +1,234 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+:root {
+  font-family: "Barlow Semi Condensed", sans-serif;
+}
+
+/* Beginning of reset CSS with minor changes recommended by Kevin Powell */
+/* see youtube https://www.youtube.com/watch?v=h3bTwCqX4ns */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Deviation from KPowell*/
+html,
+body {
+  height: 100%;
+}
+
+/* Set core body defaults */
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+*::before,
+*::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+/* End of reset CSS*/
+footer {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  justify-content: center;
+  bottom: 0;
+
+}
+/* Attribution is for the fem footer */
+.attribution {
+  font-size: 11px; 
+  text-align: center; 
+}
+.attribution a { 
+  color: hsl(228, 45%, 44%); 
+}
+
+
+body {
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+  background-color: bg-white;
+}
+
+main {
+  display: grid;
+  gap: 1rem;
+  padding-block: 1rem;
+  width: min(95%,70rem);
+  grid-auto-columns: 1fr;
+  margin-inline: auto;
+  grid-template-areas: 
+  "one" 
+  "two" 
+  "three" 
+  "four" 
+  "five";
+}
+
+article:nth-child(1) {
+  grid-area: one;
+}
+article:nth-child(2) {
+  grid-area: two;
+}
+article:nth-child(3) {
+  grid-area: three;
+}
+article:nth-child(4) {
+  grid-area: four;
+}
+article:nth-child(5) {
+  grid-area: five;
+}
+
+@media (min-width: 30em) {
+  main {
+      grid-template-areas:
+      "one one"
+      "two five"
+      "three five"
+      "four four";
+  }
+}
+
+@media (min-width: 50em) {
+  main {
+      grid-template-areas:
+      "one one two"
+      "five five five"
+      "three four four";
+  }
+}
+
+@media (min-width: 75em) {
+  main {
+      grid-template-areas:
+      "one one two five"
+      "three four four five";
+  }
+}
+
+.quote {
+  background-image: url("../images/bg-pattern-quotation.svg");
+  background-repeat: no-repeat;
+  background-position: top right 10%;
+}
+
+.shadows {
+  box-shadow: 2.5rem 3.5rem 3rem -3rem rgb(170, 170, 170);
+}
+
+.bg-primary {
+  background-color: hsl(263deg, 55%, 52%);
+}
+
+.bg-primary-two {
+  background-color: hsl(217deg, 19%, 35%);
+}
+
+.bg-primary-three {
+  background-color: hsl(219deg, 29%, 14%);
+}
+
+.bg-neutral {
+  background-color: hsl(0deg, 0%, 81%);
+}
+
+.bg-neutral-two {
+  background-color: hsl(210deg, 46%, 95%);
+}
+
+.text-black {
+  color: black;
+}
+
+.text-white {
+  color: white;
+}
+
+.p-2 {
+  padding: 1.5rem;
+}
+
+.ml-2 {
+  margin-left: 1.5rem;
+}
+
+.mt-1 {
+  margin-top: 0.75rem;
+}
+
+.mt-2 {
+  margin-top: 1.5rem;
+}
+
+.o-50 {
+  opacity: 0.5;
+}
+
+.o-70 {
+  opacity: 0.7;
+}
+
+.br-sm {
+  border-radius: 10px;
+}
+
+.br-full {
+  border-radius: 50%;
+}
+
+.display-f {
+  display: flex;
+}
+
+.font-md {
+  font-size: 0.8125rem;
+}
+
+.font-lg {
+  font-size: 1.21875rem;
+}
+
+.font-xl {
+  font-size: 1.625rem;
+}
