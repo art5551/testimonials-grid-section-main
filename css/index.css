@@ -6,6 +6,7 @@
 /* Beginning of reset CSS with minor changes recommended by Kevin Powell */
 /* see youtube https://www.youtube.com/watch?v=h3bTwCqX4ns */
 /* Box sizing rules */
+/* Box sizing rules */
 *,
 *::before,
 *::after {
@@ -13,27 +14,33 @@
 }
 
 /* Remove default margin */
-* {
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
   margin: 0;
-  padding: 0;
-  font: inherit;
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
 
 /* Set core root defaults */
 html:focus-within {
   scroll-behavior: smooth;
 }
 
-/* Deviation from KPowell*/
-html,
-body {
-  height: 100%;
-}
-
 /* Set core body defaults */
 body {
+  min-height: 100vh;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
 }
@@ -44,9 +51,18 @@ a:not([class]) {
 }
 
 /* Make images easier to work with */
-img {
+img,
+picture {
   max-width: 100%;
   display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
 }
 
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
@@ -54,15 +70,17 @@ img {
   html:focus-within {
     scroll-behavior: auto;
   }
+
   *,
-*::before,
-*::after {
+  *::before,
+  *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
 }
+
 /* End of reset CSS*/
 footer {
   display: flex;
@@ -83,6 +101,7 @@ footer {
 
 body {
   display: grid;
+  place-content: center;
   min-height: 100vh;
   background-color: bg-white;
 }
@@ -223,13 +242,13 @@ article:nth-child(5) {
 }
 
 .font-md {
-  font-size: 0.8125rem;
+  font-size: 0.6875rem;
 }
 
 .font-lg {
-  font-size: 1.21875rem;
+  font-size: .8125rem;
 }
 
 .font-xl {
-  font-size: 1.625rem;
+  font-size: 1.25rem;
 }
