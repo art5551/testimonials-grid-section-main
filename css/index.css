@@ -103,7 +103,7 @@ body {
   display: grid;
   place-content: center;
   min-height: 100vh;
-  background-color: bg-white;
+  background-color: hsl(210, 46%, 95%);
 }
 
 main {
@@ -123,19 +123,19 @@ main {
   margin-inline: auto;
 }
 
-article:nth-child(1) {
+figure:nth-child(1) {
   grid-area: one;
 }
-article:nth-child(2) {
+figure:nth-child(2) {
   grid-area: two;
 }
-article:nth-child(3) {
+figure:nth-child(3) {
   grid-area: three;
 }
-article:nth-child(4) {
+figure:nth-child(4) {
   grid-area: four;
 }
-article:nth-child(5) {
+figure:nth-child(5) {
   grid-area: five;
 }
 
